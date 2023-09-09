@@ -1,0 +1,41 @@
+class Persona:
+    def __init__(self,nombre,apellidos,edad,sexo,id):
+        self.name = nombre
+        self.lastname = apellidos
+        self.age = edad
+        self.gender = sexo
+        self.id = id
+
+    def nombre_completo(self):
+        return f'El nombre del usuario es {self.name} {self.lastname}'
+    
+    def info_persona(self):
+        return f'La informacion del usuarios es {self.lastname},{self.age} años y su identificacion {self.id}'
+    
+    def apellido_nombre(self):
+        print(f'El nombre del usuario es {self.lastname} {self.name}')
+    
+        
+def ingreso_datos():
+    nombre = input('Ingrese su nombre: ')
+    apellidos = input('Ingrese su apellido: ')
+    edad = float(input('ingrese su edad: '))
+    sexo = input('Ingrese su genero: ')
+    id = input('Ingrese su id: ')
+
+    return nombre,apellidos,edad,sexo,id
+
+nombre,apellidos,edad,sexo,id = ingreso_datos()
+tmpPersona = Persona(nombre,apellidos,edad,sexo,id)
+
+tmpPersona.apellido_nombre()
+
+
+
+
+
+
+# #crear una clase Persona cuyos atributos son nombre, apellidos, edad, sexo e identificación
+# #crear un metodo que imprima el nombre completo de la persona
+# #crear un metodo que imprima el apellido, la edad y el sexo
+# #crear un metodo que imprima el apellido, el nombre 
